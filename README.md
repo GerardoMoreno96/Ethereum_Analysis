@@ -37,8 +37,20 @@ transactions. The rest of transactions for each month can be appreciated in the 
 
 ### PART C. DATA EXPLORATION
 #### Popular Scams: 
-Utilising the provided scam dataset, what is the most lucrative form of scam? How does this change throughout time? 
+Utilising the provided scam dataset, what is the most lucrative form of scam based on value transferred in Wei (the smallest denomination of ether)?
+
+```
+"Scamming" 38407781260421703730344
+"Phishing" 26927757396110618476458
+"Fake ICO" 1356457566889629979678
+```
+How does this change throughout time? 
 
 ![](images/partC1.png)
 ![](images/partC2.png)
 ![](images/partC3.png)
+
+How many transactions were made to each scam address throughout time?
+![](images/partC4.png)
+![](images/partC5.png)
+![](images/partC6.png)
