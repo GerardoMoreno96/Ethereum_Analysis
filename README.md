@@ -9,7 +9,7 @@ Ethereum is a blockchain based distributed computing platform where users may ex
 
 A subset of the data available on BigQuery is provided at the HDFS folder. The blocks, contracts and transactions tables have been pulled down and been stripped of unneeded fields to reduce their size. There is set of scams, both active and inactive, run on the Ethereum network via etherscamDB which is available on HDFS.
 
-DATASET SCHEMA - BLOCKS
+<b>DATASET SCHEMA - BLOCKS</b>
 
 number: The block number
 
@@ -29,6 +29,7 @@ timestamp: The timestamp for when the block was collated
 
 transaction_count: The number of transactions in the block
 
+```
 +-------+--------------------+--------------------+----------------+-----+---------+--------+----------+-----------------+
 | number|                hash|               miner|      difficulty| size|gas_limit|gas_used| timestamp|transaction_count|
 +-------+--------------------+--------------------+----------------+-----+---------+--------+----------+-----------------+
@@ -52,8 +53,9 @@ transaction_count: The number of transactions in the block
 |4776216|0xc4e242278d153b5...|0xb2930b35844a230...|1766509717122373|18248|  7984452| 7965327|1513937774|               76|
 |4776217|0xde24c6f461a79da...|0x829bd824b016326...|1765647163582328|31649|  7992248| 7986059|1513937796|              180|
 |4776218|0x1689f0d2ea89886...|0xea674fdde714fd9...|1767371428423280|25953|  8000029| 7415731|1513937802|              146|
+```
 
-DATASET SCHEMA - TRANSACTIONS
+<b>DATASET SCHEMA - TRANSACTIONS</b>
 
 block_number: Block number where this transaction was in
 
@@ -69,6 +71,7 @@ gas_price : Gas price provided by the sender in Wei
 
 block_timestamp: Timestamp the associated block was registered at (effectively timestamp of the transaction)
 
+```
 +------------+--------------------+--------------------+-------------------+------+-----------+---------------+
 |block_number|        from_address|          to_address|              value|   gas|  gas_price|block_timestamp|
 +------------+--------------------+--------------------+-------------------+------+-----------+---------------+
@@ -92,8 +95,10 @@ block_timestamp: Timestamp the associated block was registered at (effectively t
 |     6638810|0x521db06bf657ed1...|                null|                  0|210000|32608136662|     1541290720|
 |     6638810|0x3f5ce5fbfe3e9af...|0xdf2c7238198ad8b...|                  0| 75138|30000000000|     1541290720|
 |     6638810|0x3f5ce5fbfe3e9af...|0xdf2c7238198ad8b...|                  0| 75138|30000000000|     1541290720|
+```
 
-DATASET SCHEMA - CONTRACTS
+<b>DATASET SCHEMA - CONTRACTS</b>
+
 address: Address of the contract
 
 is_erc20: Whether this contract is an ERC20 contract
@@ -102,6 +107,7 @@ is_erc721: Whether this contract is an ERC721 contract
 
 block_number: Block number where this contract was created
 
+```
 +--------------------+--------+---------+------------+--------------------+
 |             address|is_erc20|is_erc721|block_number|     block_timestamp|
 +--------------------+--------+---------+------------+--------------------+
@@ -125,7 +131,10 @@ block_number: Block number where this contract was created
 |0x1d601b70f3d8489...|   false|    false|     8377968|2019-08-19 01:43:...|
 |0xc0ce6542be0df27...|   false|    false|     8378020|2019-08-19 01:54:...|
 |0xdb98e880a574766...|   false|    false|     8380961|2019-08-19 13:01:...|
-DATASET SCHEMA - SCAMS.JSON
+```
+
+<b>DATASET SCHEMA - SCAMS.JSON</b>
+
 id: Unique ID for the reported scam
 
 name: Name of the Scam
@@ -148,6 +157,7 @@ ip: IP address of the reporter
 
 status: If the scam is currently active, inactive or has been taken offline
 
+```
 0x11c058c3efbf53939fb6872b09a2b5cf2410a1e2c3f3c867664e43a626d878c0: {
     id: 81,
     name: "myetherwallet.us",
@@ -169,7 +179,7 @@ status: If the scam is currently active, inactive or has been taken offline
     ],
     status: "Offline"
 },
-
+```
 
 ### PART A. TIME ANALYSIS
 
